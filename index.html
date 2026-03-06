@@ -5,22 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제휴 문의</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #f0f2f5; }
-        .box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
-        input, textarea { width: 100%; margin-bottom: 20px; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 16px; }
-        button { width: 100%; padding: 14px; background-color: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 16px; transition: background 0.3s; }
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background-color: #f8f9fa; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        h2 { text-align: center; color: #333; margin-bottom: 20px; }
+        label { display: block; margin-bottom: 15px; font-weight: bold; color: #555; }
+        input[type="email"], textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; font-size: 14px; }
+        textarea { height: 120px; resize: none; }
+        button { width: 100%; padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; margin-top: 10px; }
         button:hover { background-color: #0056b3; }
-        h2 { margin-bottom: 30px; color: #333; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h2>🤝 제휴 문의하기</h2>
+    <div class="container">
+        <h2>🤝 제휴 문의</h2>
+        <!-- Formspree에서 제공한 정확한 구조를 반영했습니다 -->
         <form action="https://formspree.io/f/mjgavywe" method="POST">
-            <input type="text" name="name" placeholder="성함 / 업체명" required>
-            <input type="email" name="email" placeholder="이메일 주소" required>
-            <textarea name="message" placeholder="제휴 문의 내용을 입력해주세요" rows="5" required></textarea>
-            <button type="submit">제휴 문의 보내기</button>
+            <label>
+                Your email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Your message:
+                <textarea name="message" required></textarea>
+            </label>
+            <!-- 추가 필드가 필요하면 여기에 넣을 수 있습니다 -->
+            <button type="submit">Send</button>
         </form>
     </div>
 </body>
